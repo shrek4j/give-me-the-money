@@ -1,9 +1,9 @@
-CREATE TABLE `stock_list` (
-  `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'Ö÷¼ü',
-  `stock_name` varchar(20) DEFAULT '""' COMMENT '¹ÉÆ±Ãû³Æ',
-  `stock_code` char(6) NOT NULL COMMENT '¹ÉÆ±±àÂë',
-  `stock_belong` char(3) NOT NULL COMMENT '6:ÉÏÖ¤ 0:Éî³É 3:´´Òµ',
-  `status` int(1) NOT NULL DEFAULT '0' COMMENT '0:Î´Ö´ĞĞ 1:ÒÑÖ´ĞĞ',
+ï»¿CREATE TABLE `stock_list` (
+  `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'ä¸»é”®',
+  `stock_name` varchar(20) DEFAULT '""' COMMENT 'è‚¡ç¥¨åç§°',
+  `stock_code` char(6) NOT NULL COMMENT 'è‚¡ç¥¨ç¼–ç ',
+  `stock_belong` char(3) NOT NULL COMMENT '6:ä¸Šè¯ 0:æ·±æˆ 3:åˆ›ä¸š',
+  `status` int(1) NOT NULL DEFAULT '0' COMMENT '0:æœªæ‰§è¡Œ 1:å·²æ‰§è¡Œ',
   `add_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -12,12 +12,12 @@ CREATE TABLE `history_data_6` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `stock_code` varchar(10) NOT NULL,
   `trade_date` varchar(15) NOT NULL,
-  `open_price` int(10) DEFAULT '0' COMMENT '¿ªÅÌ¼Û',
-  `highest_price` int(10) DEFAULT '0' COMMENT '×î¸ß¼Û',
-  `close_price` int(10) DEFAULT '0' COMMENT 'ÊÕÅÌ¼Û',
-  `lowest_price` int(10) DEFAULT '0' COMMENT '×îµÍ¼Û',
-  `volume` varchar(20) DEFAULT '"0"' COMMENT '³É½»Á¿£¨¹É£©',
-  `amount` varchar(20) DEFAULT '"0"' COMMENT '³É½»½ğ¶î',
+  `open_price` int(10) DEFAULT '0' COMMENT 'å¼€ç›˜ä»·',
+  `highest_price` int(10) DEFAULT '0' COMMENT 'æœ€é«˜ä»·',
+  `close_price` int(10) DEFAULT '0' COMMENT 'æ”¶ç›˜ä»·',
+  `lowest_price` int(10) DEFAULT '0' COMMENT 'æœ€ä½ä»·',
+  `volume` varchar(20) DEFAULT '"0"' COMMENT 'æˆäº¤é‡ï¼ˆè‚¡ï¼‰',
+  `amount` varchar(20) DEFAULT '"0"' COMMENT 'æˆäº¤é‡‘é¢',
   PRIMARY KEY (`id`),
   KEY `stock_code` (`stock_code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -26,12 +26,12 @@ CREATE TABLE `history_data_3` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `stock_code` varchar(10) NOT NULL,
   `trade_date` varchar(15) NOT NULL,
-  `open_price` int(10) DEFAULT '0' COMMENT '¿ªÅÌ¼Û',
-  `highest_price` int(10) DEFAULT '0' COMMENT '×î¸ß¼Û',
-  `close_price` int(10) DEFAULT '0' COMMENT 'ÊÕÅÌ¼Û',
-  `lowest_price` int(10) DEFAULT '0' COMMENT '×îµÍ¼Û',
-  `volume` varchar(20) DEFAULT '"0"' COMMENT '³É½»Á¿£¨¹É£©',
-  `amount` varchar(20) DEFAULT '"0"' COMMENT '³É½»½ğ¶î',
+  `open_price` int(10) DEFAULT '0' COMMENT 'å¼€ç›˜ä»·',
+  `highest_price` int(10) DEFAULT '0' COMMENT 'æœ€é«˜ä»·',
+  `close_price` int(10) DEFAULT '0' COMMENT 'æ”¶ç›˜ä»·',
+  `lowest_price` int(10) DEFAULT '0' COMMENT 'æœ€ä½ä»·',
+  `volume` varchar(20) DEFAULT '"0"' COMMENT 'æˆäº¤é‡ï¼ˆè‚¡ï¼‰',
+  `amount` varchar(20) DEFAULT '"0"' COMMENT 'æˆäº¤é‡‘é¢',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -39,12 +39,12 @@ CREATE TABLE `history_data_0` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `stock_code` varchar(10) NOT NULL,
   `trade_date` varchar(15) NOT NULL,
-  `open_price` int(10) DEFAULT '0' COMMENT '¿ªÅÌ¼Û',
-  `highest_price` int(10) DEFAULT '0' COMMENT '×î¸ß¼Û',
-  `close_price` int(10) DEFAULT '0' COMMENT 'ÊÕÅÌ¼Û',
-  `lowest_price` int(10) DEFAULT '0' COMMENT '×îµÍ¼Û',
-  `volume` varchar(20) DEFAULT '"0"' COMMENT '³É½»Á¿£¨¹É£©',
-  `amount` varchar(20) DEFAULT '"0"' COMMENT '³É½»½ğ¶î',
+  `open_price` int(10) DEFAULT '0' COMMENT 'å¼€ç›˜ä»·',
+  `highest_price` int(10) DEFAULT '0' COMMENT 'æœ€é«˜ä»·',
+  `close_price` int(10) DEFAULT '0' COMMENT 'æ”¶ç›˜ä»·',
+  `lowest_price` int(10) DEFAULT '0' COMMENT 'æœ€ä½ä»·',
+  `volume` varchar(20) DEFAULT '"0"' COMMENT 'æˆäº¤é‡ï¼ˆè‚¡ï¼‰',
+  `amount` varchar(20) DEFAULT '"0"' COMMENT 'æˆäº¤é‡‘é¢',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
